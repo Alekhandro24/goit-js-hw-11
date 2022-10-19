@@ -43,6 +43,7 @@ async function onSubmitForm(e) {
   page += 1;
 
   if (totalHits > 0) {
+    e.preventDefault();
     Notify.success(`Hooray! We found ${totalHits} images.`);
     renderMarkupList(images);
   } else {
