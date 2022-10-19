@@ -43,7 +43,6 @@ async function onSubmitForm(e) {
   page += 1;
 
   if (totalHits > 0) {
-    e.preventDefault();
     Notify.success(`Hooray! We found ${totalHits} images.`);
     renderMarkupList(images);
   } else {
@@ -54,7 +53,7 @@ async function onSubmitForm(e) {
 }
 
 function onClickMoreBtn() {
-  if (page >= lastPage) {
+  if (page > lastPage) {
     hideMoreBtn();
     Notify.failure(
       "We're sorry, but you've reached the end of search results."
