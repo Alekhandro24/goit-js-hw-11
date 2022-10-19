@@ -1,1 +1,41 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.load-more {
+    width: 160px;
+    background-color: rgb(7, 228, 209);
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color ease-out 250ms;
+    margin-bottom: 20px;
+
+    &:focus,
+    &:hover {
+        background-color: rgb(0, 255, 234);
+    }
+}
